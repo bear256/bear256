@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Azure support IoT Application</title>
+        <meta charset="utf-8" name="keywords" content="MSFT, Last Check Point, Azure, IoT" />
+        <script type="text/javascript" src="http://bear256.github.io/slides/plugins/html5slides/slides.js"></script>
+        <style type="text/css"></style>
+    </head>
+    <body>
+        <section class="slides layout-regular template-default">
+            <article>
+                <h2>Azure support IoT Application</h2>
+            </article>
+            <article>
+                <h1>Introduction</h1>
+                <p>
+                    My name is Peter Pan. I am 28 years old. In the past few years, I learned many technology. My experience include:
+                    <ul>
+                        <li>Mathematica Modeling</li>
+                        <li>Distributed Computing (MPI, Hadoop, etc)</li>
+                        <li>IDC (Rack, Server, Storage, etc)</li>
+                        <li>Computer Vision</li>
+                        <li>Machine Learning</li>
+                        <li>Cloud Computing (Ubuntu VPS, CloudFoundry/IBM Bluemix)</li>
+                        <li>IoT (Arduino/AVR-MCU & ARM/MPU-Board as my embedded devices)</li>
+                    </ul>
+                </p>
+                <p>Today, I want to shard my IoT project with you!:)</p>
+            </article>
+            <article>
+                <h1>Agenda</h1>
+                <ul>
+                    <li>Overview</li>
+                    <li>Readiness for Migrating to Azure IoT</li>
+                    <li>How to do it</li>
+                    <li>Advantages vs. Disadvantages</li>
+                    <li>Demo</li>
+                    <li>We can do more</li>
+                    <li>Any Question?</li>
+                </ul>
+            </article>
+            <article>
+                <h1>Overview</h1>
+                <p>
+                    Focus 4 sections.
+                    <ul>
+                        <li>Description</li>
+                        <li>Purpose</li>
+                        <li>Prototype Design</li>
+                        <li>Original System Implementation</li>
+                    </ul>
+                    Managers need to time for these work.
+                </p>
+            </article>
+            <article>
+                <h1>Description - Overview</h1>
+                <p>
+                    In factory, workers always do same operation below:
+                    <ul>
+                        <li>Start Machine</li>
+                        <li>Stop Machine</li>
+                        <li>Repair Machine</li>
+                        <li>Supply Material</li>
+                    </ul>
+                    Managers need to time for these work.
+                </p>
+            </article>
+            <article>
+                <h1>Purpose - Overview</h1>
+                <p>
+                    Their needs as follows:
+                    <ul>
+                        <li>Auto time for start & stop machine.</li>
+                        <li>Time for manual event trigger, such as repair & supply service.</li>
+                        <li>Event trigger drive ring & light alarm.</li>
+                    </ul>
+                    So it is a Production Monitoring System using IoT Technology. Let's just call it "PMS".
+                </p>
+            </article>
+            <article>
+                <h1>Prototype Design - Overview</h1>
+                <p>
+                    Here is my IoT Basic Model Definition.
+                    <img src="images/iot-basic-model.png" title="IoT Basic Model" />
+                    It has 5 layouts. From top to bottom, they are:
+                    <ul>
+                        <li>Application Service(应用服务层)</li>
+                        <li>Data Service(数据服务层)</li>
+                        <li>Communication(网络通讯层)</li>
+                        <li>Sensor(感知层)</li>
+                        <li>Physics(物理层)</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h1>Prototype Design - Overview</h1>
+                <p>
+                    Based on my model, I designed this prototype architecture.
+                    <img src="images/prototype-architecture.png" title="Prototype Architecture" />
+                    PMS include 4 parts:
+                    <ul>
+                        <li>Sensor Data Collector(SDC)</li>
+                        <li>Sensor Data Hub(SDH)</li>
+                        <li>Data Filter & Persistence(DFP)</li>
+                        <li>Information Visualization</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h1>Original System Implementation - Overview</h1>
+                <p>
+                    <img src="images/original-system.png" title="Original System Implementation" />
+                    <ul>
+                        <li>Based on Arduino Ethernet implements SDC.</li>
+                        <li>Implement SDH & DFP in Google Go.</li>
+                        <li>Data stored in MariaDB with manual table partition.</li>
+                        <li>Visualize Information partly & Alarm are implemented by LED Displayer drived RaspberryPi v2.</li>
+                    </ul>
+                    Their communication use socket, 0mq/nanomsg and websocket.
+                </p>
+            </article>
+            <article>
+                <h1>Readiness for Migrating to Azure IoT</h1>
+            </article>
+            <article>
+                <h1>How to do it</h1>
+            </article>
+            <article>
+                <h1>Advantages vs. DisAdvantages</h1>
+            </article>
+            <article>
+                <h1>Demo</h1>
+            </article>
+            <article>
+                <h1>We can do more</h1>
+            </article>
+            <article>
+                <h1>Any Question?</h1>
+            </article>
+            <article>
+                <h1>Thanks</h1>
+            </article>
+        </section>
+    </body>
+</html>

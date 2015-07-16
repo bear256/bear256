@@ -121,18 +121,77 @@
             </article>
             <article>
                 <h1>Readiness for Migrating to Azure IoT</h1>
+                <p>
+                    Focus Core concepts for IoT.
+                    <ol>
+                        <li>Events Hub</li>
+                        <li>Azure Storage</li>
+                        <li>Service Bus</li>
+                        <li>Notification Hub</li>
+                        <li>PowerBI</li>
+                    </ol>
+                </p>
             </article>
             <article>
                 <h1>How to do it</h1>
+                <p>
+                    <ol>
+                        <li>Events Hub replace SDH.</li>
+                        <li>Cloud Service Worker Role replace DFP.</li>
+                        <li>Azure SQL used for matedata management.</li>
+                        <li>Block Blob Storage replace MariaDB with manual partition what used for time series data store.</li>
+                        <li>Service Bus/Notification Hub replace 0mq PubSub.</li>
+                        <li>PowerBI will support better visualization.</li>
+                    </ol>
+                    <img src="images/azure-iot-architecture.png"/>
+                </p>
             </article>
             <article>
                 <h1>Advantages vs. DisAdvantages</h1>
+                <p>
+                    <ul>
+                        <li>
+                            <h2>Advantages</h2>
+                            <ol>
+                                <li>充分利用Azure现有组件服务</li>
+                                <li>缩短开发周期</li>
+                                <li>提供高可靠性及可用性</li>
+                                <li>便于维护管理</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <h2>Disdvantages</h2>
+                            <ol>
+                                <li>Arduino配置有限，不足以直接用于Events Hub</li>
+                                <li>客户网络不稳定导致数据积压和丢失</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h1>How to prefact it - Advantages vs. DisAdvantages</h1>
+                <p>
+                    <ul>
+                        <li>
+                            <h2>Focus 2 points</h2>
+                            <ol>
+                                <li>Arduino日志文件式暂存</li>
+                                <li>部署本地缓冲服务器Normal PC</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </p>
             </article>
             <article>
                 <h1>Demo</h1>
             </article>
             <article>
                 <h1>We can do more</h1>
+                <ul>
+                    <li>Quick start IoT from Scaffold</li>
+                    <li>Support Mobile Notification</li>
+                </ul>
             </article>
             <article>
                 <h1>Any Question?</h1>

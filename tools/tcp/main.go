@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/miguel-branco/goconfig"
 	"log"
+	"net/http"
 )
 
 func readCfg(cfg string) {
@@ -24,4 +25,5 @@ func readCfg(cfg string) {
 func main() {
 	fmt.Println("TaiChi Panda SiteGenerater")
 	readCfg("../../template/site.cfg")
+	http.ListenAndServe(":8000", http.FileServer(http.Dir("../../")))
 }
